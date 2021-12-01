@@ -6,7 +6,7 @@ public class PlayingCard {
 	private String color;    
 	private String suit;     
 	
-	
+	// Note: There is no default constructor (0 arguement), so we cannot instantiate generic PlayingCard
 	public PlayingCard(int value, String suit, String color) {
 		this.value = value;
 		this.suit  = suit;

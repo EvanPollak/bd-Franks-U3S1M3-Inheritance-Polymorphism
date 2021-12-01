@@ -27,7 +27,7 @@ public class AmericanPlayingCard extends PlayingCard{
 	static {  // Note: no function/method definitions - anonymous function
 		initializeMaps();  // call the function to initialize the suitMap and valueMap
 	}
-	
+	//sub class constructor --- must call the super class constructor before it does anything else
 	public AmericanPlayingCard() 
 	{
 		super(DEFAULTCARDVALUE, DEFAULTSUIT, DEFAULTCOLOR);
@@ -55,10 +55,10 @@ public class AmericanPlayingCard extends PlayingCard{
 			  suitMap.containsKey(suit) ? suit : DEFAULTSUIT,               // If valid suit passed, use it otherwise use DEFAULTSUIT
 		      suitMap.get(suit) != null ? suitMap.get(suit) : DEFAULTCOLOR);// If valid suit passed, use color for suit otherwise use DEFAULTCOLOR  
 		
-		if (value > MAXVALUE) {
+		if (value > MAXVALUE) { // if the value we received exceeds teh max, max it the max
 			setValue(MAXVALUE);
 		}
-		if (value < MINVALUE) {
+		if (value < MINVALUE) { // if the value we received below the min, make it the min
 			setValue(MINVALUE);
 		}
 	}
